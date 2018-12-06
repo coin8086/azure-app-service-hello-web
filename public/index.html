@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>Loading...</h1>
+  <script>
+    (function() {
+      var request = new XMLHttpRequest();
+      request.onreadystatechange = function () {
+        if (this.readyState === 4){
+          document.querySelector('h1').innerText = request.responseText;
+        }
+      };
+      request.open('GET', '/api/hello', true);
+      request.send(null);
+    })();
+  </script>
+</body>
+</html>
