@@ -1,6 +1,6 @@
 FROM ruby:2.5
 
-RUN gem install sinatra
+RUN gem install sinatra sinatra-contrib
 RUN mkdir /site
 WORKDIR /site
 ADD . /site/
